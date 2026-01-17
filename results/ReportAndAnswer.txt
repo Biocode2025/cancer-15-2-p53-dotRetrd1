@@ -1,0 +1,5 @@
+Report and Answer:
+Number of new stop codons introduced due to mutation: 14
+My conclusion: The protein sequence on average seem to get shorter because usually more stop codons are introduced 
+than removed however this is not always the case and its not uncommon for the protein sequence to get longer or remain the same, 
+it just seems statistically less likely.
