@@ -5,17 +5,12 @@ def Transcription(dna):
   dna = dna.upper()
   return ''.join(map.get(n, '') for n in dna)
 
-def Translation(rna, d):
+def Translation(rna, d, frame=2):
     protein = []
     rna = rna.upper()
-    #iterate in steps of 3
-    for i in range(0, len(rna) - (len(rna) % 3), 3):
-        codon = rna[i:i+3]
-        aa = d.get(codon)
-        if aa is None:
-            raise KeyError("WHAT unkown codon ??? :shock:") 
-        protein.append(aa)
-    return protein
+    for i in range(frame, len(rna) - (len(rna)-frame)%3, 3):
+        protein.append(d[rna[i:i+3]])
+    return ''.join(protein)
 
 def pointMutate(dna, pos):
     bases = ['A','T','G','C','DEL','INS']
